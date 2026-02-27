@@ -62,7 +62,7 @@ const stats = [
   },
   {
     icon: Globe,
-    value: 8,
+    value: 9,
     suffix: "",
     label: "стран",
     sub: "география присутствия",

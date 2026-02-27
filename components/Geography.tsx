@@ -3,19 +3,43 @@
 import { motion } from "framer-motion";
 
 const points = [
-  { name: "Москва", x: 37, y: 28, country: "Россия" },
-  { name: "Минск", x: 30, y: 26, country: "Беларусь" },
+  { name: "Москва", x: 30, y: 22, country: "Россия" },
+  { name: "Санкт-Петербург", x: 22, y: 15, country: "Россия" },
+  { name: "Екатеринбург", x: 55, y: 20, country: "Россия" },
+  { name: "Новосибирск", x: 80, y: 22, country: "Россия" },
+  { name: "Минск", x: 20, y: 26, country: "Беларусь" },
   { name: "Астана", x: 68, y: 32, country: "Казахстан" },
-  { name: "Алматы", x: 70, y: 42, country: "Казахстан" },
-  { name: "Ташкент", x: 63, y: 45, country: "Узбекистан" },
-  { name: "Бишкек", x: 68, y: 44, country: "Кыргызстан" },
-  { name: "Душанбе", x: 63, y: 50, country: "Таджикистан" },
-  { name: "Тбилиси", x: 42, y: 44, country: "Грузия" },
-  { name: "Баку", x: 47, y: 46, country: "Азербайджан" },
-  { name: "Ереван", x: 42, y: 48, country: "Армения" },
-  { name: "Новосибирск", x: 72, y: 22, country: "Россия" },
-  { name: "Екатеринбург", x: 57, y: 22, country: "Россия" },
+  { name: "Алматы", x: 78, y: 44, country: "Казахстан" },
+  { name: "Ташкент", x: 64, y: 52, country: "Узбекистан" },
+  { name: "Бишкек", x: 72, y: 50, country: "Кыргызстан" },
+  { name: "Душанбе", x: 64, y: 58, country: "Таджикистан" },
+  { name: "Тбилиси", x: 35, y: 46, country: "Грузия" },
+  { name: "Баку", x: 44, y: 50, country: "Азербайджан" },
+  { name: "Ереван", x: 40, y: 53, country: "Армения" },
 ];
+
+const routes = [
+  { from: 0, to: 1 },
+  { from: 0, to: 4 },
+  { from: 0, to: 2 },
+  { from: 0, to: 10 },
+  { from: 2, to: 3 },
+  { from: 2, to: 5 },
+  { from: 5, to: 6 },
+  { from: 5, to: 7 },
+  { from: 7, to: 8 },
+];
+
+function routePath(fromIdx: number, toIdx: number) {
+  const a = points[fromIdx];
+  const b = points[toIdx];
+  const dx = b.x - a.x;
+  const dy = b.y - a.y;
+  const dist = Math.sqrt(dx * dx + dy * dy);
+  const mx = (a.x + b.x) / 2;
+  const my = (a.y + b.y) / 2 - dist * 0.1;
+  return `M ${a.x} ${a.y} Q ${mx} ${my} ${b.x} ${b.y}`;
+}
 
 export default function Geography() {
   return (
@@ -39,7 +63,7 @@ export default function Geography() {
             Работаем по всему СНГ
           </h2>
           <p className="text-gray text-sm sm:text-base max-w-2xl mx-auto">
-            Собственные представительства и партнёрская сеть в 8 странах
+            Собственные представительства и партнёрская сеть в 9 странах
           </p>
         </motion.div>
 
@@ -50,9 +74,7 @@ export default function Geography() {
           viewport={{ once: true, margin: "-60px" }}
           className="relative bg-bg rounded-2xl border border-gray-border p-6 sm:p-10 overflow-hidden"
         >
-          {/* Stylized CIS map area */}
           <div className="relative w-full aspect-[16/9] sm:aspect-[2/1]">
-            {/* Background grid lines */}
             <svg
               className="absolute inset-0 w-full h-full text-gray-border/50"
               viewBox="0 0 100 70"
@@ -82,14 +104,13 @@ export default function Geography() {
               ))}
             </svg>
 
-            {/* Simplified CIS land mass */}
             <svg
               className="absolute inset-0 w-full h-full"
               viewBox="0 0 100 70"
               fill="none"
             >
               <path
-                d="M20 20 Q25 15 35 18 Q45 12 55 15 Q65 10 80 14 Q88 16 90 22 Q92 30 88 35 Q85 40 80 42 Q75 48 70 50 Q65 55 58 52 Q50 55 45 52 Q40 50 38 48 Q35 50 30 48 Q25 44 22 38 Q18 30 20 20 Z"
+                d="M 12 12 Q 18 8 28 12 Q 40 8 55 10 Q 70 6 85 14 Q 92 18 88 24 Q 84 28 78 30 Q 76 36 78 44 Q 80 50 74 54 Q 68 60 60 58 Q 52 56 46 52 Q 40 56 34 50 Q 28 44 22 36 Q 16 30 14 24 Q 10 18 12 12 Z"
                 fill="#1E40AF"
                 fillOpacity="0.05"
                 stroke="#1E40AF"
@@ -98,41 +119,31 @@ export default function Geography() {
               />
             </svg>
 
-            {/* Route lines */}
             <svg
               className="absolute inset-0 w-full h-full"
               viewBox="0 0 100 70"
               fill="none"
             >
-              {[
-                { from: points[0], to: points[2] },
-                { from: points[0], to: points[1] },
-                { from: points[2], to: points[3] },
-                { from: points[2], to: points[4] },
-                { from: points[4], to: points[5] },
-                { from: points[0], to: points[7] },
-                { from: points[0], to: points[10] },
-                { from: points[10], to: points[2] },
-              ].map((route, i) => (
-                <motion.line
+              {routes.map((route, i) => (
+                <motion.path
                   key={i}
-                  x1={route.from.x}
-                  y1={route.from.y}
-                  x2={route.to.x}
-                  y2={route.to.y}
+                  d={routePath(route.from, route.to)}
                   stroke="#1E40AF"
-                  strokeWidth="0.3"
-                  strokeDasharray="1 0.5"
-                  opacity="0.3"
+                  strokeWidth="0.25"
+                  fill="none"
+                  opacity={0.35}
                   initial={{ pathLength: 0 }}
                   whileInView={{ pathLength: 1 }}
-                  transition={{ delay: 0.5 + i * 0.1, duration: 0.8 }}
+                  transition={{
+                    delay: 0.5 + i * 0.12,
+                    duration: 1,
+                    ease: "easeOut",
+                  }}
                   viewport={{ once: true }}
                 />
               ))}
             </svg>
 
-            {/* City points */}
             {points.map((point, i) => (
               <motion.div
                 key={point.name}
@@ -166,19 +177,24 @@ export default function Geography() {
             ))}
           </div>
 
-          {/* Legend */}
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-            {["Казахстан", "Россия", "Узбекистан", "Беларусь", "Кавказ", "Кыргызстан"].map(
-              (country) => (
-                <div
-                  key={country}
-                  className="flex items-center gap-1.5 text-xs text-gray"
-                >
-                  <div className="w-2 h-2 rounded-full bg-blue" />
-                  {country}
-                </div>
-              )
-            )}
+            {[
+              "Россия",
+              "Беларусь",
+              "Казахстан",
+              "Узбекистан",
+              "Кавказ",
+              "Кыргызстан",
+              "Таджикистан",
+            ].map((country) => (
+              <div
+                key={country}
+                className="flex items-center gap-1.5 text-xs text-gray"
+              >
+                <div className="w-2 h-2 rounded-full bg-blue" />
+                {country}
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>

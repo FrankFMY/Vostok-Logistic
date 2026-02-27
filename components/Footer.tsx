@@ -91,22 +91,22 @@ export default function Footer() {
             <h4 className="text-sm font-semibold mb-4">Контакты</h4>
             <div className="flex flex-col gap-3">
               <a
-                href="tel:+77172456789"
+                href="tel:+74951234567"
                 className="flex items-center gap-2 text-white/50 text-sm hover:text-orange transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 shrink-0" />
-                +7 (7172) 45-67-89
+                +7 (495) 123-45-67
               </a>
               <a
-                href="mailto:info@vostok-logistic.kz"
+                href="mailto:info@vostok-logistic.ru"
                 className="flex items-center gap-2 text-white/50 text-sm hover:text-orange transition-colors"
               >
                 <Mail className="w-3.5 h-3.5 shrink-0" />
-                info@vostok-logistic.kz
+                info@vostok-logistic.ru
               </a>
               <div className="flex items-start gap-2 text-white/50 text-sm">
                 <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" />
-                <span>г. Астана, ул. Мангилик Ел, 55/22</span>
+                <span>г. Москва, ул. Тверская, 22/1</span>
               </div>
               <div className="flex items-center gap-2 text-white/50 text-sm">
                 <Clock className="w-3.5 h-3.5 shrink-0" />
@@ -118,7 +118,7 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-white/10">
           <p className="text-white/30 text-xs">
-            &copy; 2025 ТОО «Восток Логистик». Все права защищены.
+            &copy; 2025 ООО «Восток Логистик». Все права защищены.
           </p>
           <div className="flex gap-4 text-xs text-white/30">
             <a href="#" className="hover:text-orange transition-colors">

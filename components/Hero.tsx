@@ -81,7 +81,7 @@ export default function Hero() {
         >
           {[
             { value: "12 лет", label: "на рынке" },
-            { value: "8 стран", label: "присутствия" },
+            { value: "9 стран", label: "присутствия" },
             { value: "24/7", label: "поддержка" },
           ].map((stat) => (
             <div key={stat.label}>

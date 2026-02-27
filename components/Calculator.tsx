@@ -5,19 +5,19 @@ import { motion } from "framer-motion";
 import { Calculator as CalcIcon, MapPin, Package, Weight, Clock, Banknote } from "lucide-react";
 
 const cities = [
-  "Алматы",
+  "Москва",
+  "Санкт-Петербург",
+  "Екатеринбург",
+  "Новосибирск",
+  "Минск",
   "Астана",
+  "Алматы",
   "Ташкент",
   "Бишкек",
-  "Москва",
-  "Минск",
+  "Душанбе",
   "Тбилиси",
   "Баку",
-  "Душанбе",
   "Ереван",
-  "Новосибирск",
-  "Екатеринбург",
-  "Самарканд",
   "Караганда",
   "Шымкент",
 ];
@@ -198,7 +198,7 @@ export default function Calculator() {
                     Ориентировочная стоимость
                   </p>
                   <p className="text-xl font-bold text-blue">
-                    {result.price} ₸
+                    {result.price} ₽
                   </p>
                 </div>
               </div>
