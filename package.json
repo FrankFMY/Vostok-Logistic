@@ -6,21 +6,38 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "check": "tsc --noEmit",
+    "verify": "bun run check && bun run build && bun audit"
   },
   "dependencies": {
-    "framer-motion": "^12.34.3",
-    "lucide-react": "^0.575.0",
-    "next": "^16.1.6",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "framer-motion": "^13.1.1",
+    "lucide-react": "^1.34.0",
+    "next": "^16.3.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.2.1",
-    "@types/node": "^25.3.2",
-    "@types/react": "^19.2.14",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3"
-  }
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.3.0",
+    "@types/react": "^19.2.18",
+    "postcss": "^8.5.26",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
+  },
+  "description": "Freight logistics interface study with an interactive shipping calculator and responsive corporate UI.",
+  "author": {
+    "name": "Artem Prianishnikov",
+    "email": "Pryanishnikovartem@gmail.com",
+    "url": "https://frankfmy.com"
+  },
+  "license": "MIT",
+  "homepage": "https://vostok-logistic.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrankFMY/Vostok-Logistic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FrankFMY/Vostok-Logistic/issues"
+  },
+  "packageManager": "bun@1.4.0"
 }

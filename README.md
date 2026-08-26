@@ -1,32 +1,45 @@
 # Vostok Logistic
 
-Landing page for a freight logistics company. Bold corporate design with red/dark palette, interactive shipping calculator, geography map, and service statistics.
+Freight logistics interface study with an interactive shipping calculator and responsive corporate UI.
 
-## Tech Stack
+[Live demo](https://vostok-logistic.vercel.app)
 
-- **Next.js 16** — App Router, Turbopack
-- **Tailwind CSS v4** — `@theme` directive for custom design tokens
-- **Framer Motion** — Scroll-triggered animations
-- **Lucide React** — Icon system
+This is a fictional interface study created to demonstrate product presentation, responsive implementation, and polished frontend delivery. It does not represent a real client or operating company.
 
-## Getting Started
+## Focus
+
+- responsive logistics landing architecture
+- interactive shipping-cost calculator
+- service/geography information design
+- motion and mobile navigation
+
+## Stack
+
+- Next.js 16 and React 19;
+- TypeScript;
+- Tailwind CSS 4;
+- Framer Motion;
+- Lucide icons;
+- Vercel deployment.
+
+## Development
 
 ```bash
-npm install
-npm run dev
+bun install --frozen-lockfile
+bun run verify
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open `http://localhost:3000`.
 
-## Project Structure
+## Author
 
-```
-components/
-  Header.tsx       — Fixed navbar with mobile hamburger menu
-  Hero.tsx         — Hero section with company introduction
-  Calculator.tsx   — Shipping cost calculator
-  Geography.tsx    — Delivery geography coverage
-  Stats.tsx        — Key company statistics
-  Services.tsx     — Logistics services overview
-  Footer.tsx       — Site footer with navigation
-```
+**Artem Prianishnikov**
+
+- GitHub: https://github.com/FrankFMY
+- Website: https://frankfmy.com
+- Email: Pryanishnikovartem@gmail.com
+
+## License
+
+MIT © 2026 Artem Prianishnikov. See [LICENSE](LICENSE).
