@@ -32,13 +32,13 @@ bun run dev
 
 Open `http://localhost:3000`.
 
-## Author
+## Author and contact
 
-**Artem Prianishnikov**
+**Artem Prianishnikov** · [FrankFMY](https://github.com/FrankFMY)
 
-- GitHub: https://github.com/FrankFMY
-- Website: https://frankfmy.com
-- Email: Pryanishnikovartem@gmail.com
+[Website](https://frankfmy.com) · [Telegram](https://t.me/FrankFMY) · [LinkedIn](https://www.linkedin.com/in/frankfmy/) · [X](https://x.com/FrankFMY) · [npm profile](https://www.npmjs.com/~frankfmy)
+
+Email: [frankfmy@proton.me](mailto:frankfmy@proton.me) · [Pryanishnikovartem@gmail.com](mailto:Pryanishnikovartem@gmail.com)
 
 ## License
 
