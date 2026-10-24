@@ -1,10 +1,10 @@
 # Vostok Logistic
 
-Freight logistics interface study with an interactive shipping calculator and responsive corporate UI.
+A modern freight-logistics landing page with an interactive shipping-cost calculator, clear service geography and a responsive corporate interface.
 
 [Live demo](https://vostok-logistic.vercel.app)
 
-This is a fictional interface study created to demonstrate product presentation, responsive implementation, and polished frontend delivery. It does not represent a real client or operating company.
+Explore services and route geography, then try the shipping calculator—all in a cohesive interface with subtle motion and mobile navigation.
 
 ## Focus
 
